@@ -1,4 +1,14 @@
 def fizzbuzz(n)
-  (n % 3 == 0) && (n % 5 == 0) ? 'fizzbuzz' : \
-  (n % 3 == 0) ? 'fizz' : (n % 5 == 0) ? 'buzz' :  n
+  if n % 3 == 0 && n % 5 == 0
+    return "fizzbuzz"
+  elsif n % 5 == 0
+    return "buzz"
+  elsif n % 3 == 0
+    return "fizz"
+  else
+    return n
+  end
 end
+
+x = (0..100).to_a
+x.each { |i| puts fizzbuzz(i) }
